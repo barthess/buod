@@ -208,22 +208,6 @@ static void ready_isr_disable(void) {
 }
 #endif /* STM32_NAND_USE_FSMC_INT */
 
-static void nand_wp_assert(void) {
-  palClearPad(GPIOB, GPIOB_NAND_WP);
-}
-
-static void nand_wp_release(void) {
-  palSetPad(GPIOB, GPIOB_NAND_WP);
-}
-
-static void red_led_on(void) {
-  palSetPad(GPIOI, GPIOI_LED_R);
-}
-
-static void red_led_off(void) {
-  palClearPad(GPIOI, GPIOI_LED_R);
-}
-
 /**
  *
  */

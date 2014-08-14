@@ -34,7 +34,7 @@
 #endif
 
 #if !defined(STM32_HSECLK)
-#define STM32_HSECLK                8000000
+#define STM32_HSECLK                12000000
 #endif
 
 /*
@@ -108,8 +108,8 @@
 #define GPIOD_PIN3                  3
 #define GPIOD_MEM_OE                4
 #define GPIOD_MEM_WE                5
-#define GPIOD_PIN6                  6
-#define GPIOG_NAND_CE1              7
+#define GPIOD_NAND_RB_NWAIT         6
+#define GPIOD_NAND_CE1              7
 #define GPIOD_MEM_D13               8
 #define GPIOD_MEM_D14               9
 #define GPIOD_MEM_D15               10
@@ -536,8 +536,8 @@
                                      PIN_MODE_INPUT(GPIOD_PIN3) |           \
                                      PIN_MODE_ALTERNATE(GPIOD_MEM_OE) |         \
                                      PIN_MODE_ALTERNATE(GPIOD_MEM_WE) |   \
-                                     PIN_MODE_INPUT(GPIOD_PIN6) |           \
-                                     PIN_MODE_ALTERNATE(GPIOG_NAND_CE1) |           \
+                                     PIN_MODE_INPUT(GPIOD_NAND_RB_NWAIT) |           \
+                                     PIN_MODE_ALTERNATE(GPIOD_NAND_CE1) |           \
                                      PIN_MODE_ALTERNATE(GPIOD_MEM_D13) |           \
                                      PIN_MODE_ALTERNATE(GPIOD_MEM_D14) |           \
                                      PIN_MODE_ALTERNATE(GPIOD_MEM_D15) |          \
@@ -552,8 +552,8 @@
                                      PIN_OTYPE_PUSHPULL(GPIOD_PIN3) |           \
                                      PIN_OTYPE_PUSHPULL(GPIOD_MEM_OE) |         \
                                      PIN_OTYPE_PUSHPULL(GPIOD_MEM_WE) |   \
-                                     PIN_OTYPE_PUSHPULL(GPIOD_PIN6) |           \
-                                     PIN_OTYPE_PUSHPULL(GPIOG_NAND_CE1) |           \
+                                     PIN_OTYPE_PUSHPULL(GPIOD_NAND_RB_NWAIT) |           \
+                                     PIN_OTYPE_PUSHPULL(GPIOD_NAND_CE1) |           \
                                      PIN_OTYPE_PUSHPULL(GPIOD_MEM_D13) |           \
                                      PIN_OTYPE_PUSHPULL(GPIOD_MEM_D14) |           \
                                      PIN_OTYPE_PUSHPULL(GPIOD_MEM_D15) |          \
@@ -568,8 +568,8 @@
                                      PIN_OSPEED_100M(GPIOD_PIN3) |           \
                                      PIN_OSPEED_100M(GPIOD_MEM_OE) |         \
                                      PIN_OSPEED_100M(GPIOD_MEM_WE) |   \
-                                     PIN_OSPEED_100M(GPIOD_PIN6) |           \
-                                     PIN_OSPEED_100M(GPIOG_NAND_CE1) |           \
+                                     PIN_OSPEED_100M(GPIOD_NAND_RB_NWAIT) |           \
+                                     PIN_OSPEED_100M(GPIOD_NAND_CE1) |           \
                                      PIN_OSPEED_100M(GPIOD_MEM_D13) |           \
                                      PIN_OSPEED_100M(GPIOD_MEM_D14) |           \
                                      PIN_OSPEED_100M(GPIOD_MEM_D15) |          \
@@ -584,8 +584,8 @@
                                      PIN_PUPDR_PULLUP(GPIOD_PIN3) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_OE) |         \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_WE) |   \
-                                     PIN_PUPDR_PULLUP(GPIOD_PIN6) |           \
-                                     PIN_PUPDR_PULLUP(GPIOG_NAND_CE1) |           \
+                                     PIN_PUPDR_PULLUP(GPIOD_NAND_RB_NWAIT) |           \
+                                     PIN_PUPDR_PULLUP(GPIOD_NAND_CE1) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_D13) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_D14) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_D15) |          \
@@ -600,8 +600,8 @@
                                      PIN_ODR_HIGH(GPIOD_PIN3) |           \
                                      PIN_ODR_HIGH(GPIOD_MEM_OE) |         \
                                      PIN_ODR_HIGH(GPIOD_MEM_WE) |   \
-                                     PIN_ODR_HIGH(GPIOD_PIN6) |           \
-                                     PIN_ODR_HIGH(GPIOG_NAND_CE1) |           \
+                                     PIN_ODR_HIGH(GPIOD_NAND_RB_NWAIT) |           \
+                                     PIN_ODR_HIGH(GPIOD_NAND_CE1) |           \
                                      PIN_ODR_HIGH(GPIOD_MEM_D13) |           \
                                      PIN_ODR_HIGH(GPIOD_MEM_D14) |           \
                                      PIN_ODR_HIGH(GPIOD_MEM_D15) |          \
@@ -616,8 +616,8 @@
                                      PIN_AFIO_AF(GPIOD_PIN3, 0) |           \
                                      PIN_AFIO_AF(GPIOD_MEM_OE, 12) |          \
                                      PIN_AFIO_AF(GPIOD_MEM_WE, 12) |   \
-                                     PIN_AFIO_AF(GPIOD_PIN6, 0) |           \
-                                     PIN_AFIO_AF(GPIOG_NAND_CE1, 12))
+                                     PIN_AFIO_AF(GPIOD_NAND_RB_NWAIT, 0) |           \
+                                     PIN_AFIO_AF(GPIOD_NAND_CE1, 12))
 #define VAL_GPIOD_AFRH              (PIN_AFIO_AF(GPIOD_MEM_D13, 12) |           \
                                      PIN_AFIO_AF(GPIOD_MEM_D14, 12) |           \
                                      PIN_AFIO_AF(GPIOD_MEM_D15, 12) |          \

@@ -41,7 +41,7 @@
 #define STM32_CLOCK48_REQUIRED              TRUE
 #define STM32_SW                            STM32_SW_PLL
 #define STM32_PLLSRC                        STM32_PLLSRC_HSE
-#define STM32_PLLM_VALUE                    8
+#define STM32_PLLM_VALUE                    12
 #define STM32_PLLN_VALUE                    336
 #define STM32_PLLP_VALUE                    2
 #define STM32_PLLQ_VALUE                    7
@@ -309,8 +309,8 @@
 #define STM32_FSMC_USE_FSMC1                TRUE
 #define STM32_FSMC_FSMC1_IRQ_PRIORITY       10
 
-#define STM32_NAND_USE_FSMC_NAND1           TRUE
-#define STM32_NAND_USE_FSMC_INT             TRUE
+#define STM32_NAND_USE_FSMC_NAND2           TRUE
+#define STM32_NAND_USE_EXT_INT              FALSE
 #define STM32_NAND_DMA_STREAM               STM32_DMA_STREAM_ID(2, 7)
 #define STM32_NAND_DMA_PRIORITY             0
 #define STM32_NAND_DMA_ERROR_HOOK(nandp)    osalSysHalt("DMA failure")

@@ -578,13 +578,19 @@
                                      PIN_OSPEED_100M(GPIOD_PIN13) |          \
                                      PIN_OSPEED_100M(GPIOD_MEM_D0) |          \
                                      PIN_OSPEED_100M(GPIOD_MEM_D1))
+
+#if STM32_NAND_USE_EXT_INT
+#define NAND_RB_NWAIT_PUPDR(pin) (PIN_PUPDR_PULLUP(pin))
+#else
+#define NAND_RB_NWAIT_PUPDR(pin) (PIN_PUPDR_FLOATING(pin))
+#endif
 #define VAL_GPIOD_PUPDR             (PIN_PUPDR_PULLUP(GPIOD_MEM_D2) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_D3) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_PIN2) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_PIN3) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_OE) |         \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_WE) |   \
-                                     PIN_PUPDR_PULLUP(GPIOD_NAND_RB_NWAIT) |           \
+                                     NAND_RB_NWAIT_PUPDR(GPIOD_NAND_RB_NWAIT) |  \
                                      PIN_PUPDR_PULLUP(GPIOD_NAND_CE1) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_D13) |           \
                                      PIN_PUPDR_PULLUP(GPIOD_MEM_D14) |           \
@@ -878,13 +884,19 @@
                                      PIN_OSPEED_100M(GPIOG_PIN13) |          \
                                      PIN_OSPEED_100M(GPIOG_PIN14) |          \
                                      PIN_OSPEED_100M(GPIOG_PIN15))
+
+#if STM32_NAND_USE_EXT_INT
+#define NAND_RB1_PUPDR(pin) (PIN_PUPDR_FLOATING(pin))
+#else
+#define NAND_RB1_PUPDR(pin) (PIN_PUPDR_PULLUP(pin))
+#endif
 #define VAL_GPIOG_PUPDR             (PIN_PUPDR_PULLUP(GPIOG_MEM_A10) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_MEM_A11) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_MEM_A12) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_MEM_A13) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_MEM_A14) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_MEM_A15) |           \
-                                     PIN_PUPDR_PULLUP(GPIOG_NAND_RB1) |           \
+                                     NAND_RB1_PUPDR(GPIOG_NAND_RB1) |          \
                                      PIN_PUPDR_PULLUP(GPIOG_NAND_RB2) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_PIN8) |           \
                                      PIN_PUPDR_PULLUP(GPIOG_NAND_CE2) |           \

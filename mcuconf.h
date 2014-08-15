@@ -309,7 +309,7 @@
 #define STM32_FSMC_USE_FSMC1                TRUE
 #define STM32_FSMC_FSMC1_IRQ_PRIORITY       10
 
-#define STM32_NAND_USE_FSMC_NAND2           TRUE
+#define STM32_NAND_USE_FSMC_NAND1           TRUE
 #define STM32_NAND_USE_EXT_INT              FALSE
 #define STM32_NAND_DMA_STREAM               STM32_DMA_STREAM_ID(2, 7)
 #define STM32_NAND_DMA_PRIORITY             0

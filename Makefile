@@ -82,6 +82,7 @@ PROJECT = ch
 # Imported source files and paths
 CHIBIOS = ../chibios-svn
 include $(CHIBIOS)/os/hal/hal.mk
+include $(CHIBIOS)/os/hal/boards/NONSTANDARD_STM32F4_BARTHESS2/board.mk
 include $(CHIBIOS)/os/hal/ports/STM32/STM32F4xx/platform.mk
 include $(CHIBIOS)/os/hal/osal/rt/osal.mk
 include $(CHIBIOS)/os/rt/rt.mk
@@ -98,13 +99,13 @@ CSRC = $(PORTSRC) \
        $(KERNSRC) \
        $(TESTSRC) \
        $(HALSRC) \
+       $(BOARDSRC) \
        $(PLATFORMSRC) \
        $(CHIBIOS)/os/various/chprintf.c \
-       board.c \
        main.c \
        dma_storm_adc.c \
        dma_storm_spi.c \
-       dma_storm_uart.c \
+       dma_storm_uart.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -134,7 +135,7 @@ TCPPSRC =
 ASMSRC = $(PORTASM)
 
 INCDIR = $(PORTINC) $(KERNINC) $(TESTINC) \
-         $(HALINC) $(OSALINC) $(PLATFORMINC) \
+         $(HALINC) $(OSALINC) $(BOARDINC) $(PLATFORMINC) \
          $(CHIBIOS)/os/various
 
 

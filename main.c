@@ -50,7 +50,7 @@
 
 #include "dma_storm.h"
 #include "string.h"
-#include "stdlib.h"
+#include "stdlib.h" /* for randomizer */
 
 /*
  ******************************************************************************
